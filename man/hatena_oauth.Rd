@@ -27,10 +27,11 @@ Get Hatena OAuth Token
 }
 \examples{
 \dontrun{
+library(httr)
 token <- oauth1.0_token_hatena(hatena_endpoint(),
                                hatena_app(key = "key", secret = "secret"),
                                scope = "read_public,write_public")
-GET("http://n.hatena.com/applications/my.json", config(token = hatena_token))
+GET("http://n.hatena.com/applications/my.json", config(token = token))
 }
 
 }
